@@ -7,7 +7,8 @@ let package = Package(
     name: "AOC2020",
     products: [
         .executable(name: "dayOne", targets: ["DayOne"]),
-        .executable(name: "dayTwo", targets: ["DayTwo"])
+        .executable(name: "dayTwo", targets: ["DayTwo"]),
+        .executable(name: "dayThree", targets: ["DayThree"])
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -22,9 +23,12 @@ let package = Package(
         .target(
             name: "DayTwo",
             dependencies:[]),
-//        .target(
-//            name: "AOC2020",
-//            dependencies:[.product(name: "ArgumentParser", package: "swift-argument-parser")]),
+        .target(
+            name: "DayThree",
+            dependencies:["AOC2020"]),
+        .target(
+            name: "AOC2020",
+            dependencies:[]),
 //        .testTarget(
 //            name: "AOC2020Tests",
 //            dependencies: ["AOC2020"]),
