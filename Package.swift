@@ -8,7 +8,8 @@ let package = Package(
     products: [
         .executable(name: "dayOne", targets: ["DayOne"]),
         .executable(name: "dayTwo", targets: ["DayTwo"]),
-        .executable(name: "dayThree", targets: ["DayThree"])
+        .executable(name: "dayThree", targets: ["DayThree"]),
+        .executable(name: "dayFour", targets: ["DayFour"])
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -26,6 +27,9 @@ let package = Package(
         .target(
             name: "DayThree",
             dependencies:["AOC2020"]),
+        .target(
+            name: "DayFour",
+            dependencies:[]),
         .target(
             name: "AOC2020",
             dependencies:[]),

@@ -18,6 +18,12 @@ extension Point:CustomStringConvertible {
     }
 }
 
+extension StringProtocol {
+    public subscript(offset: Int) -> Character {
+        self[index(startIndex, offsetBy: offset)]
+    }
+}
+
 
 extension Point {
     static func + (left: Point, right: Point) -> Point {
