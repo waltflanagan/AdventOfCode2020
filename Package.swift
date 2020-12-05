@@ -9,7 +9,8 @@ let package = Package(
         .executable(name: "dayOne", targets: ["DayOne"]),
         .executable(name: "dayTwo", targets: ["DayTwo"]),
         .executable(name: "dayThree", targets: ["DayThree"]),
-        .executable(name: "dayFour", targets: ["DayFour"])
+        .executable(name: "dayFour", targets: ["DayFour"]),
+        .executable(name: "dayFive", targets: ["DayFive"])
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -29,6 +30,9 @@ let package = Package(
             dependencies:["AOC2020"]),
         .target(
             name: "DayFour",
+            dependencies:[]),
+        .target(
+            name: "DayFive",
             dependencies:[]),
         .target(
             name: "AOC2020",

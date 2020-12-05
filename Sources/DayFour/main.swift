@@ -192,11 +192,11 @@ let passportStrings = input.components(separatedBy: "\n\n")
 
 print(passportStrings.count)
 
-let passports = passportStrings.compactMap({ Passport(partOneString: $0) })
+let passports = passportStrings.compactMap({ Passport(partOneString: $0.lowercased()) })
 
 print("\(passports.count) valid passports")
 
-let strictPassports = passportStrings.compactMap({ Passport(partTwoString: $0) })
+let strictPassports = passportStrings.compactMap({ Passport(partTwoString: $0.lowercased()) })
 
 print("\(strictPassports.count) valid strict passports")
 
