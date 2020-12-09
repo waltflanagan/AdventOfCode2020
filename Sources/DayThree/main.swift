@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Shared
 
 struct Point {
     let x: Int
@@ -18,11 +19,6 @@ extension Point:CustomStringConvertible {
     }
 }
 
-extension StringProtocol {
-    public subscript(offset: Int) -> Character {
-        self[index(startIndex, offsetBy: offset)]
-    }
-}
 
 
 extension Point {

@@ -6,6 +6,9 @@
 //
 
 import Foundation
-
+import Shared
 
 Day1().solve()
+
+
+"My String"[1]

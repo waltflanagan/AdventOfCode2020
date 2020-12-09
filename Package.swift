@@ -10,7 +10,12 @@ let package = Package(
         .executable(name: "dayTwo", targets: ["DayTwo"]),
         .executable(name: "dayThree", targets: ["DayThree"]),
         .executable(name: "dayFour", targets: ["DayFour"]),
-        .executable(name: "dayFive", targets: ["DayFive"])
+        .executable(name: "dayFive", targets: ["DayFive"]),
+        .executable(name: "daySix", targets: ["DaySix"]),
+        .executable(name: "daySeven", targets: ["DaySeven"]),
+        .executable(name: "dayEight", targets: ["DayEight"]),
+        .executable(name: "dayNine", targets: ["DayNine"]),
+        
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -20,19 +25,34 @@ let package = Package(
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
-            name: "DayOne",
+            name: "Shared",
             dependencies:[]),
+        .target(
+            name: "DayOne",
+            dependencies:["Shared"]),
         .target(
             name: "DayTwo",
             dependencies:[]),
         .target(
             name: "DayThree",
-            dependencies:["AOC2020"]),
+            dependencies:["Shared"]),
         .target(
             name: "DayFour",
             dependencies:[]),
         .target(
             name: "DayFive",
+            dependencies:[]),
+        .target(
+            name: "DaySix",
+            dependencies:[]),
+        .target(
+            name: "DaySeven",
+            dependencies:[]),
+        .target(
+            name: "DayEight",
+            dependencies:[]),
+        .target(
+            name: "DayNine",
             dependencies:[]),
         .target(
             name: "AOC2020",
