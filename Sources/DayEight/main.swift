@@ -30,7 +30,6 @@ struct Operation {
     
     mutating func execute(_ process: Process) throws {
         guard !executed else {
-            print("accumulator - \(process.accumulator)")
             throw "Rentrency Detected!"
         }
         
@@ -72,31 +71,36 @@ class Process {
         self.skip = skip
     }
     
-    func run() {
+    func run() -> Bool {
         while true {
             
             if currentOperation >= operations.count {
                 print("SUCCESS - \(accumulator)")
-                exit(1)
+                return false
             }
             
             do {
                 try operations[currentOperation].execute(self)
             } catch {
-                print("\(error)")
-                return
+                return true
             }
 
         }
     }
 }
 
+let start = Date()
+print("start - \(start.timeIntervalSince(start))")
 let process = Process(operations)
 process.run()
+print("part 1 - \(process.accumulator)")
 
 for i in 0..<operations.count {
     let process = Process(operations, skip: i)
-    process.run()
+    if !process.run() {
+        break
+    }
 }
 
+print("end - \(Date().timeIntervalSince(start))")
 
