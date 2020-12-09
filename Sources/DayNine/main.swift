@@ -64,8 +64,8 @@ struct XmasCipher {
     
 }
 
-////let cipher = XmasCipher(preambleSize: 5, input: testInput)
-//print("Test Input first invalid - \(cipher.firstInvalid()) - \(cipher.breakWith(127))")
+let cipher = XmasCipher(preambleSize: 5, input: testInput)
+print("Test Input first invalid - \(cipher.firstInvalid()) - \(cipher.breakWith(127))")
 
 let realCipher = XmasCipher(preambleSize: 25, input: realInput)
 print("Real Input first invalid - \(realCipher.firstInvalid()) - \(realCipher.breakWith(88311122))")

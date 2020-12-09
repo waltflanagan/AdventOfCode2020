@@ -38,7 +38,7 @@ let package = Package(
             dependencies:["Shared"]),
         .target(
             name: "DayFour",
-            dependencies:[]),
+            dependencies:["Shared"]),
         .target(
             name: "DayFive",
             dependencies:[]),
@@ -47,7 +47,7 @@ let package = Package(
             dependencies:[]),
         .target(
             name: "DaySeven",
-            dependencies:[]),
+            dependencies:["Shared"]),
         .target(
             name: "DayEight",
             dependencies:[]),
