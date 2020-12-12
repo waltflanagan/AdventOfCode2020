@@ -15,6 +15,9 @@ let package = Package(
         .executable(name: "daySeven", targets: ["DaySeven"]),
         .executable(name: "dayEight", targets: ["DayEight"]),
         .executable(name: "dayNine", targets: ["DayNine"]),
+        .executable(name: "dayTen", targets: ["DayTen"]),
+        .executable(name: "dayEleven", targets: ["DayEleven"]),
+        .executable(name: "DayTwelve", targets: ["DayTwelve"]),
         
     ],
     dependencies: [
@@ -50,10 +53,19 @@ let package = Package(
             dependencies:["Shared"]),
         .target(
             name: "DayEight",
-            dependencies:[]),
+            dependencies:["Shared"]),
         .target(
             name: "DayNine",
-            dependencies:[]),
+            dependencies:["Shared"]),
+        .target(
+            name: "DayTen",
+            dependencies:["Shared"]),
+        .target(
+            name: "DayEleven",
+            dependencies:["Shared"]),
+        .target(
+            name: "DayTwelve",
+            dependencies:["Shared"]),
         .target(
             name: "AOC2020",
             dependencies:[]),

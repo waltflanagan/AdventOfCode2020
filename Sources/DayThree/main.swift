@@ -8,24 +8,6 @@
 import Foundation
 import Shared
 
-struct Point {
-    let x: Int
-    let y: Int
-}
-
-extension Point:CustomStringConvertible {
-    var description: String {
-        return "(\(x), \(y))"
-    }
-}
-
-
-
-extension Point {
-    static func + (left: Point, right: Point) -> Point {
-        return Point(x: left.x + right.x, y: left.y + right.y)
-    }
-}
 
 struct Map {
     let data: [String]
