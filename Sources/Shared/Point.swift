@@ -35,3 +35,15 @@ extension Point {
         return Point(x: left.x * scale, y: left.y * scale)
     }
 }
+
+extension Point {
+    public static var identity: Point {
+        return Point(x: 0, y: 0)
+    }
+    
+    public var manhattanValue: Int {
+        return abs(x) + abs(y)
+    }
+}
+
+extension Point: Hashable {}

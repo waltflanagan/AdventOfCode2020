@@ -5,6 +5,7 @@ import PackageDescription
 
 let package = Package(
     name: "AOC2020",
+    platforms: [.macOS(.v10_15)],
     products: [
         .executable(name: "dayOne", targets: ["DayOne"]),
         .executable(name: "dayTwo", targets: ["DayTwo"]),

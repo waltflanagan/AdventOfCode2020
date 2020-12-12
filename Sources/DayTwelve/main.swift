@@ -14,26 +14,6 @@ struct Ship {
     let location: Point
 }
 
-extension Point {
-    static var identity: Point {
-        return Point(x: 0, y: 0)
-    }
-    
-    var manhattanValue: Int {
-        return abs(x) + abs(y)
-    }
-    
-    var cgPoint: CGPoint {
-        return CGPoint(x: x, y: y)
-    }
-}
-
-extension CGPoint {
-    var point: Point {
-        Point(x: Int(x), y: Int(y))
-    }
-}
-
 extension Heading {
     func byRotating(_ degrees: Int) ->  Heading {
         let steps = degrees / 90
